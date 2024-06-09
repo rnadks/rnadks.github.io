@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Tuner</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Guitar Tuner</h1>
+    <form method="POST">
+        <label for="tuning_select">Select Tuning:</label>
+        <select name="tuning_select" id="tuning_select">
+            {% for tuning, values in tuning_options.items() %}
+                <option value="{{ tuning }}" {% if tuning == selected_tuning %}selected{% endif %}>{{ tuning }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Apply</button>
+    </form>
+    <div id="tuning-results">
+        {% for string_name, _ in tuning_options[selected_tuning].items() %}
+            <div id="{{ string_name }}">
+                <span>{{ string_name }}</span>
+                <div class="tuning-indicator"></div>
+            </div>
+        {% endfor %}
+        <div id="loading-indicator" class="loading">Loading...</div>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>
+
+
+
+

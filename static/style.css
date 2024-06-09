@@ -1,0 +1,59 @@
+/* static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#tuning-results {
+    text-align: center;
+}
+
+.tuning-indicator {
+    width: 100px;
+    height: 20px;
+    margin: 5px 0;
+    border: 1px solid #000;
+    display: inline-block;
+}
+
+.too-high {
+    border-color: red;
+}
+
+.too-low {
+    border-color: blue;
+}
+
+.loading {
+    color: gray;
+    font-style: italic;
+}
+
+
+
+
+
